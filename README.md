@@ -23,7 +23,7 @@ If a field is required, the [required="required"] is automatically added to the 
 
 ### Or use HTML 4 (but why would you?)
 
-```html
+```HTML+Django/Jinja
 {{ form|renderform_html4:"formrenderer/default.html, name, email, phone" }}
 ```
 
