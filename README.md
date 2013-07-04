@@ -10,16 +10,16 @@ If a field is required, the [required="required"] is automatically added to the 
 
 ### Simple HTML5 Example
 
-    :::html
-    {% load renderform %}
-    <form>
-        <legend>Your details</legend>
-        {{ form|renderform:"formrenderer/default.html, name, email, phone" }}
+```html
+{% load renderform %}
+<form>
+    <legend>Your details</legend>
+    {{ form|renderform:"formrenderer/default.html, name, email, phone" }}
 
-        <legend>Extra info</legend>
-        {{ form|renderform:"formrenderer/default.html, dealer, comments" }}
-    </form>
-
+    <legend>Extra info</legend>
+    {{ form|renderform:"formrenderer/default.html, dealer, comments" }}
+</form>
+```
 
 ### Or use HTML 4 (but why would you?)
 
