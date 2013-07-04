@@ -57,9 +57,9 @@ Append the field name with the class name. Eg. `my_field[key=value]`
 ```HTML+Django/Jinja
 {% load renderform %}
 <form>
-    {{ form|renderform:"formrenderer/bootstrap_horizontal.html, name.input-block-level, email.input-block-level }}
+    {{ form|renderform:"formrenderer/bootstrap_horizontal.html, name.input-block-level, email.input-block-level" }}
     <hr/>
-    {{ form|renderform:"formrenderer/bootstrap_horizontal.html, phone, dealer[class=myClass] }}
+    {{ form|renderform:"formrenderer/bootstrap_horizontal.html, phone, dealer[class=myClass]" }}
     <hr/>
     {{ form|renderform:"formrenderer/bootstrap_horizontal.html, comments.input-block-level[rows=3]" }}
 </form>
