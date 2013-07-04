@@ -23,43 +23,44 @@ If a field is required, the [required="required"] is automatically added to the 
 
 ### Or use HTML 4 (but why would you?)
 
-    :::html
-    {{ form|renderform_html4:"formrenderer/default.html, name, email, phone" }}
-
+```html
+{{ form|renderform_html4:"formrenderer/default.html, name, email, phone" }}
+```
 
 ### Add a class name to a field
 
 Append the field name with the class name. Eg. `my_field.class_name`
 
-    :::html
-    {{ form|renderform:"formrenderer/default.html, name.class_name" }}
-
+```html
+{{ form|renderform:"formrenderer/default.html, name.class_name" }}
+```
 
 ### Add an attribute
 
 Append the field name with the attribute. Eg. `my_field[key=value]`
 
-    :::html
-    {{ form|renderform:"formrenderer/default.html, comments[rows=3]" }}
-    {{ form|renderform:"formrenderer/default.html, comments[rows=3,disabled=disabled]" }}
-
+```html
+{{ form|renderform:"formrenderer/default.html, comments[rows=3]" }}
+{{ form|renderform:"formrenderer/default.html, comments[rows=3,disabled=disabled]" }}
+```
 
 ### Add class names and attributes
 
 Append the field name with the class name. Eg. `my_field[key=value]`
 
-    :::html
-    {{ form|renderform:"formrenderer/default.html, comments.my_class[rows=3]" }}
-
+```html
+{{ form|renderform:"formrenderer/default.html, comments.my_class[rows=3]" }}
+```
 
 ### Complicated Example
 
-    :::html
-    {% load renderform %}
-    <form>
-        {{ form|renderform:"formrenderer/bootstrap_horizontal.html, name.input-block-level, email.input-block-level }}
-        <hr/>
-        {{ form|renderform:"formrenderer/bootstrap_horizontal.html, phone, dealer[class=myClass] }}
-        <hr/>
-        {{ form|renderform:"formrenderer/bootstrap_horizontal.html, comments.input-block-level[rows=3]" }}
-    </form>
+```html
+{% load renderform %}
+<form>
+    {{ form|renderform:"formrenderer/bootstrap_horizontal.html, name.input-block-level, email.input-block-level }}
+    <hr/>
+    {{ form|renderform:"formrenderer/bootstrap_horizontal.html, phone, dealer[class=myClass] }}
+    <hr/>
+    {{ form|renderform:"formrenderer/bootstrap_horizontal.html, comments.input-block-level[rows=3]" }}
+</form>
+```
