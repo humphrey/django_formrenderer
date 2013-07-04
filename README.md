@@ -6,6 +6,9 @@ HTML 5 input types are automatically used for field types that are appropriate.
 
 If a field is required, the [required="required"] is automatically added to the element.
 
+More info at:
+https://github.com/humphrey/django_formrenderer
+
 ## Examples
 
 ### Simple HTML5 Example
