@@ -14,10 +14,12 @@ If a field is required, the [required="required"] is automatically added to the 
     {% load renderform %}
     <form>
         <legend>Your details</legend>
-        {{ form|renderform:"formrenderer/default.html, name, email, phone" }}
+        <table>
+        {{ form|renderform:"formrenderer/as_table.html, name, email, phone" }}
+        </table>
 
         <legend>Extra info</legend>
-        {{ form|renderform:"formrenderer/default.html, dealer, comments" }}
+        {{ form|renderform:"formrenderer/as_p.html, dealer, comments" }}
     </form>
 
 
@@ -54,12 +56,16 @@ Append the field name with the class name. Eg. `my_field[key=value]`
 
 ### Complicated Example
 
+Also includes some default templates for bootstrap
+
     :::html
     {% load renderform %}
     <form>
-        {{ form|renderform:"formrenderer/bootstrap_horizontal.html, name.input-block-level, email.input-block-level }}
+        {{ form|renderform:"formrenderer/bootstrap/horizontal.html, name.input-block-level, email.input-block-level }}
         <hr/>
-        {{ form|renderform:"formrenderer/bootstrap_horizontal.html, phone, dealer[class=myClass] }}
+        {{ form|renderform:"formrenderer/bootstrap/horizontal.html, phone, dealer[class=myClass] }}
         <hr/>
-        {{ form|renderform:"formrenderer/bootstrap_horizontal.html, comments.input-block-level[rows=3]" }}
+        {{ form|renderform:"formrenderer/bootstrap/horizontal_dollars.html, price[class=total-price,disabled=disabled] }}
+        <hr/>
+        {{ form|renderform:"formrenderer/bootstrap/horizontal.html, comments.input-block-level[rows=3]" }}
     </form>

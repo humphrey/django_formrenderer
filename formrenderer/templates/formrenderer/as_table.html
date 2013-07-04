@@ -1,9 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-</head>
-<body>
-
-</body>
-</html>
+{% for f in fields %}
+	<tr>
+		<th>{{ f.label_tag }}</th>
+		<td>{{ f.errors }}{{ f }}</td>
+	</tr>
+{% endfor %}

@@ -1,8 +1,1 @@
-<table>
-{% for f in fields %}
-	<tr>
-		<th>{{ f.label_tag }}</th>
-		<td>{{ f.errors }}{{ f }}</td>
-	</tr>
-{% endfor %}
-</table>
+{% extends "formrenderer/as_table.html" %}
