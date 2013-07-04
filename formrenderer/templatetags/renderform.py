@@ -8,12 +8,12 @@ register = template.Library()
 
 
 @register.filter
-def renderform(value, arg='renderform/default.html'):
+def renderform(value, arg='formrenderer/default.html'):
     return _renderform(value, arg, True)
 
 
 @register.filter
-def renderform_html4(value, arg='renderform/default.html'):
+def renderform_html4(value, arg='formrenderer/default.html'):
     return _renderform(value, arg, False)
 
 
