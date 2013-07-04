@@ -9,6 +9,11 @@ If a field is required, the [required="required"] is automatically added to the 
 More info at:
 https://github.com/humphrey/django_formrenderer
 
+## Installation
+
+`pip install django_formrenderer`
+
+
 ## Examples
 
 ### Simple HTML5 Example
