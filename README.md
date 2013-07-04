@@ -10,7 +10,7 @@ If a field is required, the [required="required"] is automatically added to the 
 
 ### Simple HTML5 Example
 
-```html
+```HTML+Django/Jinja
 {% load renderform %}
 <form>
     <legend>Your details</legend>
@@ -31,7 +31,7 @@ If a field is required, the [required="required"] is automatically added to the 
 
 Append the field name with the class name. Eg. `my_field.class_name`
 
-```html
+```HTML+Django/Jinja
 {{ form|renderform:"formrenderer/default.html, name.class_name" }}
 ```
 
@@ -39,7 +39,7 @@ Append the field name with the class name. Eg. `my_field.class_name`
 
 Append the field name with the attribute. Eg. `my_field[key=value]`
 
-```html
+```HTML+Django/Jinja
 {{ form|renderform:"formrenderer/default.html, comments[rows=3]" }}
 {{ form|renderform:"formrenderer/default.html, comments[rows=3,disabled=disabled]" }}
 ```
@@ -48,13 +48,13 @@ Append the field name with the attribute. Eg. `my_field[key=value]`
 
 Append the field name with the class name. Eg. `my_field[key=value]`
 
-```html
+```HTML+Django/Jinja
 {{ form|renderform:"formrenderer/default.html, comments.my_class[rows=3]" }}
 ```
 
 ### Complicated Example
 
-```html
+```HTML+Django/Jinja
 {% load renderform %}
 <form>
     {{ form|renderform:"formrenderer/bootstrap_horizontal.html, name.input-block-level, email.input-block-level }}
