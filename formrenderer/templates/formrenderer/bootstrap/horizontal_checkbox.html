@@ -1,0 +1,9 @@
+{% for f in fields %}
+<div class="control-group{{ f.errors|yesno:" error," }}{{ f.field.required|yesno:" required," }}">
+    <label class="checkbox">
+        {% block field %}{{ f }}{% endblock %}
+        {{ f.label }}
+    </label>
+    {% block help_errors %}{% if f.help_text or f.errors %}<span class="help-inline">{{ f.errors|join:"; " }}{% if f.errors and f.help_text %} <br/> {% endif %}{{ f.help_text }}</span>{% endif %}{% endblock %}
+</div>
+{% endfor %}

@@ -1,0 +1,4 @@
+{% for f in fields %}
+    {% if f.errors %}<span class="error-block">{{ f.errors|join:"; " }}</span>{% endif %}
+    {{ f }}
+{% endfor %}
